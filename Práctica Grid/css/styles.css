@@ -1,0 +1,448 @@
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Esto te muestra un 'layout' para ver si algo no está en su sitio */
+/* * {
+    outline: 1px solid red;
+} */
+
+/* Clases reutilizadas */
+
+.contenedor {
+    max-width: var(--ancho-contenedor);
+    margin: 0 auto;
+}
+
+.boton {
+    color: var(--color-superficie);
+    font-weight: var(--peso-fuerte);
+    font-size: var(--texto-s);
+    text-align: center;
+
+    padding: var(--espacio-alto-boton) var(--espacio-4);
+    border-radius: var(--radio-pildora);
+}
+
+.boton--grande {
+    padding: var(--espacio-2-5) var(--espacio-5)
+}
+
+.boton--sol {
+    background-color: var(--color-sol);
+
+    color: var(--color-tinta);
+    font-weight: var(--peso-fuerte);
+}
+
+.boton--sol:hover {
+    background-color: var(--color-sol-hover);
+
+    transition: var(--transicion);
+}
+
+.boton--borde {
+    color: var(--color-superficie);
+
+    border: 2px solid var(--color-borde);
+}
+
+.boton--borde:hover {
+    background-color: var(--color-tinta-suave);
+
+    transition: var(--transicion);
+}
+
+.boton--oscuro {
+    background-color: var(--color-tinta);
+}
+
+.boton--oscuro:hover {
+    background-color: var(--color-tinta-suave);
+
+    transition: var(--transicion);
+}
+
+.boton--ola {
+    background-color: var(--color-ola);
+}
+
+.boton--ola:hover {
+    background-color: var(--color-ola-hover);
+
+    transition: var(--transicion);
+}
+
+.seccion__titulo {
+    font-size: var(--texto-2xl);
+
+    margin-bottom: 2rem;
+}
+
+/* Esto es para asignar un margin entre secciones (obviando el hero) sin repetir código */
+section:not(hero)+section:not(hero) {
+    margin-bottom: var(--espacio-secciones);
+}
+
+main {
+    flex: 1;
+}
+
+/* Fin clases reutilizadas */
+
+/* Sección Cabecera */
+
+.cabecera {
+    background-color: var(--color-superficie);
+
+    position: sticky;
+    top: 0;
+}
+
+.cabecera__interior {
+    height: var(--alto-cabecera);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-tinta);
+    font-size: var(--texto-xl);
+    font-family: var(--fuente-titulo);
+    font-weight: var(--peso-fuerte);
+}
+
+/* Fin Sección Cabecera */
+
+/* Sección Menú */
+
+.menu {}
+
+.menu__lista {
+    display: flex;
+    gap: var(--espacio-6);
+}
+
+.menu__enlace {
+    color: var(--color-tinta-suave);
+}
+
+.menu__enlace:hover {
+    color: var(--color-tinta);
+}
+
+/* Fin Sección Menú */
+
+/* Sección Hero */
+
+.hero {
+    background-color: var(--color-tinta);
+}
+
+.hero__interior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espacio-3);
+
+    padding-block: var(--espacio-9);
+}
+
+.hero__titulo {
+    color: var(--color-superficie);
+    font-size: var(--texto-3xl);
+}
+
+.hero__texto-contenedor {
+    margin-bottom: 3rem;
+}
+
+.hero__texto {
+    color: var(--color-texto);
+    text-align: center;
+}
+
+.hero__acciones {
+    display: flex;
+    gap: var(--espacio-3);
+}
+
+/* Fin Sección Hero */
+
+/* Sección Datos Clave */
+
+.datos {
+    background-color: var(--color-superficie);
+
+    margin-top: var(--espacio-4);
+    margin-bottom: var(--espacio-6);
+
+    padding: var(--espacio-4)
+}
+
+.datos__lista {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dato__valor {
+    color: var(--color-tinta);
+    font-size: var(--texto-xl);
+}
+
+.dato__etiqueta {
+    color: var(--color-tinta-suave);
+}
+
+/* Fin Sección Datos Clave */
+
+/* Sección Cartel Rejilla */
+
+.cartel__rejilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.tarjeta {
+    background-color: var(--color-superficie);
+    height: var(--alto-tarjeta);
+
+    border-radius: var(--radio-m);
+    box-shadow: var(--sombra-suave);
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.tarjeta__imagen {
+    background-color: var(--color-coral);
+
+    width: 100%;
+    flex: 1;
+}
+
+.tarjeta__cuerpo {
+    flex: 1;
+
+    padding: var(--espacio-3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta__cuerpo__contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta__titulo {
+    font-size: var(--texto-l);
+}
+
+.tarjeta__estilo {
+    color: var(--color-ola);
+    font-size: var(--texto-xs);
+    font-weight: var(--peso-fuerte);
+}
+
+.tarjeta__texto {
+    color: var(--color-tinta-suave);
+    font-size: var(--texto-xs);
+
+    margin-bottom: 1rem;
+}
+
+/* Fin Sección Cartel Rejilla */
+
+/* Sección Escenarios */
+
+.bloque {
+    height: var(--alto-bloque);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--espacio-6);
+}
+
+.bloque__visual {
+    width: var(--alto-bloque-imagen);
+
+    border-radius: var(--radio-m);
+}
+
+.bloque__visual--playa {
+    background-color: var(--color-ola);
+}
+
+.bloque__visual--pinar {
+    background-color: var(--color-sol);
+
+    order: -1;
+}
+
+.bloque__texto {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--espacio-3);
+}
+
+.bloque__titulo {
+    font-size: var(--texto-xl);
+}
+
+.bloque__texto p {
+    color: var(--color-tinta-suave);
+    font-size: var(--texto-s);
+}
+
+/* Fin Sección Escenarios */
+
+/* Sección Planes */
+
+.planes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacio-3);
+}
+
+.plan {
+    background-color: var(--color-superficie);
+    height: 420px;
+
+    padding: var(--espacio-3) var(--espacio-4);
+    border-radius: var(--radio-m);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: var(--sombra-suave);
+    border: 2px solid var(--color-borde)
+}
+
+.plan--destacado {
+    background-color: var(--color-tinta);
+
+    color: var(--color-superficie);
+
+    border-color: var(--color-sol);
+}
+
+.plan--destacado .plan__precio {
+    color: var(--color-sol);
+}
+
+.plan--destacado .plan__lista li {
+    color: var(--color-texto);
+}
+
+.plan__contenido {
+    padding-top: var(--espacio-6);
+
+    position: relative;
+}
+
+.plan__etiqueta {
+    background-color: var(--color-sol);
+
+    color: var(--color-tinta);
+    font-weight: var(--peso-fuerte);
+
+    padding: 0 var(--espacio-3);
+    position: absolute;
+    top: 10px;
+
+    border-radius: var(--radio-pildora);
+}
+
+.plan__nombre {
+    font-size: var(--texto-l);
+}
+
+.plan__precio {
+    font-size: var(--texto-2xl);
+    font-weight: var(--peso-fuerte);
+}
+
+.plan__lista {
+    list-style-type: "• ";
+    flex: 1;
+}
+
+.plan__lista li {
+    color: var(--color-tinta-suave);
+}
+
+/* Fin Sección Planes */
+
+/* Sección Footer */
+
+.pie {
+    background-color: var(--color-tinta);
+    color: var(--color-superficie);
+
+    position: sticky;
+
+}
+
+.pie .logo {
+    color: var(--color-superficie);
+
+}
+
+.pie__interior {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: var(--espacio-5) 0;
+}
+
+.pie__columna {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-3);
+}
+
+.pie__columna--marca p {
+    color: var(--color-texto);
+}
+
+.pie__titulo {
+    padding-top: 1.4rem;
+}
+
+.pie__lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-1);
+}
+
+.pie__lista li {
+    color: var(--color-texto);
+}
+
+.pie__legal-interior {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--espacio-5) 0;
+    font-size: var(--texto-s);
+    color: var(--color-texto);
+}
+
+/* Fin Sección Footer */
