@@ -83,7 +83,7 @@ body {
 }
 
 /* Esto es para asignar un margin entre secciones (obviando el hero) sin repetir código */
-section:not(hero)+section:not(hero) {
+section:not(.hero)+section:not(.hero) {
     margin-bottom: var(--espacio-secciones);
 }
 
