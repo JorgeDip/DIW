@@ -10,10 +10,11 @@ body {
     outline: 1px solid red;
 } */
 
-/* Clases reutilizadas */
+/* Clases reutilizables */
 
 .contenedor {
     max-width: var(--ancho-contenedor);
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -280,8 +281,6 @@ main {
 }
 
 .bloque__visual {
-    width: var(--alto-bloque-imagen);
-
     border-radius: var(--radio-m);
 }
 
