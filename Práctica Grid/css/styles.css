@@ -100,6 +100,7 @@ main {
 
     position: sticky;
     top: 0;
+    z-index: 99;
 }
 
 .cabecera__interior {
@@ -379,6 +380,7 @@ main {
 .plan__precio {
     font-size: var(--texto-2xl);
     font-weight: var(--peso-fuerte);
+
 }
 
 .plan__lista {
@@ -437,12 +439,20 @@ main {
     color: var(--color-texto);
 }
 
+.pie__lista li a:hover {
+    color: var(--color-sol);
+}
+
 .pie__legal-interior {
     display: flex;
     justify-content: space-between;
     padding: var(--espacio-5) 0;
     font-size: var(--texto-s);
     color: var(--color-texto);
+}
+
+.pie__legal-interior a:hover {
+    color: var(--color-sol);
 }
 
 /* Fin Sección Footer */
