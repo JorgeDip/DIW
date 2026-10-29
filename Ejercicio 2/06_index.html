@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,26 +7,79 @@
     <title>6º Ejercicio</title>
 
     <style>
-        h1 {
-            text-align: center;
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
 
-        .catalogo {
-            width: 700px;
-            margin: 0 auto;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        .catalogo div {
-            width: 150px;
-            height: 400px;
+        .portfolio-container {
+            width: 900px;
+            max-width: 100%;
         }
 
-        .catalogo img {
+        .portfolio-header {
+            text-align: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .portfolio-header h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .gallery-flex {
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            background-color: #fff;
+        }
+
+        .gallery-column {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            object-position: right;
+            display: block;
+        }
+
+        .item-tall {
+            flex: 2;
+        }
+
+        .item-short {
+            flex: 1;
+        }
+
+        .item-full {
+            flex: 1;
+            height: 100%;
+        }
+
+        .item-third {
+            flex: 1;
         }
 
     </style>
@@ -34,10 +87,46 @@
 
 <body>
 
-    <h1>Portfolio</h1>
+    <div class="portfolio-container">
+        <header class="portfolio-header">
+            <h2>Portfolio - Tarea 6</h2>
+        </header>
 
-    <div class="catalogo">
-        <div><img src="img/portfolio/1001-400x300.jpg" alt="">
+        <div class="gallery-flex">
+
+            <div class="gallery-column">
+                <div class="gallery-item item-tall">
+                    <img src="/img/portfolio/1003-400x500.jpg" alt="Imagen 1">
+                </div>
+                <div class="gallery-item item-short">
+                    <img src="/img/portfolio/1005-400x400.jpg" alt="Imagen 2">
+                </div>
+            </div>
+
+            <div class="gallery-column">
+                <div class="gallery-item item-full">
+                    <img src="/img/portfolio/1020-400x1200.jpg" alt="Imagen 3">
+                </div>
+            </div>
+
+            <div class="gallery-column">
+                <div class="gallery-item item-third">
+                    <img src="/img/portfolio/1036-400x300.jpg" alt="Imagen 4">
+                </div>
+                <div class="gallery-item item-third">
+                    <img src="/img/portfolio/1037-400x200.jpg" alt="Imagen 5">
+                </div>
+                <div class="gallery-item item-third">
+                    <img src="/img/portfolio/1038-400x400.jpg" alt="Imagen 6">
+                </div>
+            </div>
+
+            <div class="gallery-column">
+                <div class="gallery-item item-full">
+                    <img src="/img/portfolio/1054-400x800.jpg" alt="Imagen 7">
+                </div>
+            </div>
+
         </div>
     </div>
 
