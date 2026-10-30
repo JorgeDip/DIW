@@ -110,6 +110,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -128,6 +129,7 @@ main {
 .menu__lista {
     display: flex;
     gap: var(--espacio-6);
+    flex-wrap: wrap;
 }
 
 .menu__enlace {
