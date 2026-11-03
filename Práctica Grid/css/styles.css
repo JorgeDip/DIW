@@ -233,10 +233,32 @@ main {
 }
 
 .tarjeta__imagen {
-    background-color: var(--color-coral);
-
     width: 100%;
     flex: 1;
+}
+
+.cartel__rejilla .tarjeta:nth-child(1) .tarjeta__imagen {
+    background-color: var(--color-ola);
+}
+
+.cartel__rejilla .tarjeta:nth-child(2) .tarjeta__imagen {
+    background-color: var(--color-sol);
+}
+
+.cartel__rejilla .tarjeta:nth-child(3) .tarjeta__imagen {
+    background-color: var(--color-coral);
+}
+
+.cartel__rejilla .tarjeta:nth-child(4) .tarjeta__imagen {
+    background-color: var(--color-tinta-suave);
+}
+
+.cartel__rejilla .tarjeta:nth-child(5) .tarjeta__imagen {
+    background-color: var(--color-ola);
+}
+
+.cartel__rejilla .tarjeta:nth-child(6) .tarjeta__imagen {
+    background-color: var(--color-sol);
 }
 
 .tarjeta__cuerpo {
