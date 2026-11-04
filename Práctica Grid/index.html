@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Festival Marea · Layout con Flexbox y Grid</title>
-
+  <script>
+    try {
+      var t = localStorage.getItem("tema");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) { }
+  </script>
   <!-- 1º las variables y el reset, 2º vuestros estilos -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -17,8 +22,6 @@
   <header class="cabecera">
     <div class="contenedor cabecera__interior">
       <a href="#" class="logo">Marea</a>
-
-
 
       <button class="menu-toggle" aria-label="Abrir menú">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -300,6 +303,33 @@
     <div class="pie__legal">
       <div class="contenedor pie__legal-interior">
         <p>© 2026 Festival Marea</p>
+        <div class="selector" role="group" aria-label="Tema">
+          <button type="button" data-tema="light" aria-label="Tema claro" title="Claro">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+          </button>
+          <button type="button" data-tema="dark" aria-label="Tema oscuro" title="Oscuro">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+          <button type="button" data-tema="system" aria-label="Tema del sistema" title="Automático">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect width="20" height="14" x="2" y="3" rx="2" />
+              <line x1="8" x2="16" y1="21" y2="21" />
+              <line x1="12" x2="12" y1="17" y2="21" />
+            </svg>
+          </button>
+        </div>
         <p><a href="#">Privacidad</a> · <a href="#">Cookies</a></p>
       </div>
     </div>

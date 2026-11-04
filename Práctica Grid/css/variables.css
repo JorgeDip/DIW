@@ -80,28 +80,29 @@
 
 /* Media Query */
 
-@media(prefers-color-scheme: dark) {
-    :root {
-        /* ---------- Color ---------- */
-        --color-fondo: #14213D;
-        /* fondo de página */
-        --color-superficie: #ffffff;
-        /* tarjetas, cajas */
-        --color-tinta: #14213d;
-        /* texto principal y fondos oscuros */
-        --color-tinta-suave: #4a5878;
-        /* texto secundario */
-        --color-sol: #fcbf49;
-        --color-sol-hover: #E9A31A;
-        /* acento principal (botones, destacados) */
-        --color-ola: #2a9d8f;
-        --color-ola-hover: #1E7B70;
-        /* acento secundario */
-        --color-coral: #ef476f;
-        /* acento de alerta / oferta */
-        --color-borde: #d5dee3;
-        --color-texto: #C9D3E6;
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --color-fondo: var(--color-tinta-900, #14213d);
+        --color-texto-principal: var(--color-tinta-100, #c9d3e6);
+        --color-tarjeta: #1c2b4d;
+        --color-borde: #2c3d66;
+        --color-acento: #8fa9ff;
+        --color-boton-texto: #14213d;
     }
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --color-fondo: var(--color-tinta-900, #14213d);
+    --color-texto-principal: var(--color-tinta-100, #c9d3e6);
+    --color-tarjeta: #1c2b4d;
+    --color-borde: #2c3d66;
+    --color-acento: #8fa9ff;
+    --color-boton-texto: #14213d;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
 }
 
 /* Fin Media Query */
