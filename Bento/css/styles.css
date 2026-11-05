@@ -260,7 +260,7 @@ body {
     color: var(--color-white);
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
     body {
         padding: 1.5rem 1rem;
     }

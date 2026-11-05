@@ -34,8 +34,7 @@ body {
 
 .boton--sol {
     background-color: var(--color-sol);
-
-    color: var(--color-tinta);
+    color: var(--color-tinta-fija);
     font-weight: var(--peso-fuerte);
 }
 
@@ -46,14 +45,12 @@ body {
 }
 
 .boton--borde {
-    color: var(--color-superficie);
-
+    color: var(--color-sobre-oscuro);
     border: 2px solid var(--color-borde);
 }
 
 .boton--borde:hover {
-    background-color: var(--color-tinta-suave);
-
+    background-color: var(--color-velo);
     transition: var(--transicion);
 }
 
@@ -149,7 +146,7 @@ main {
 /* Sección Hero */
 
 .hero {
-    background-color: var(--color-tinta);
+    background-color: var(--color-fondo-oscuro);
 }
 
 .hero__interior {
@@ -162,7 +159,7 @@ main {
 }
 
 .hero__titulo {
-    color: var(--color-superficie);
+    color: var(--color-sobre-oscuro);
     font-size: var(--texto-3xl);
 }
 
@@ -366,10 +363,8 @@ main {
 }
 
 .plan--destacado {
-    background-color: var(--color-tinta);
-
-    color: var(--color-superficie);
-
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-sobre-oscuro);
     border-color: var(--color-sol);
 }
 
@@ -389,8 +384,7 @@ main {
 
 .plan__etiqueta {
     background-color: var(--color-sol);
-
-    color: var(--color-tinta);
+    color: var(--color-tinta-fija);
     font-weight: var(--peso-fuerte);
 
     padding: 0 var(--espacio-3);
@@ -424,16 +418,13 @@ main {
 /* Sección Footer */
 
 .pie {
-    background-color: var(--color-tinta);
-    color: var(--color-superficie);
-
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-sobre-oscuro);
     position: sticky;
-
 }
 
 .pie .logo {
-    color: var(--color-superficie);
-
+    color: var(--color-sobre-oscuro);
 }
 
 .pie__interior {
@@ -486,8 +477,8 @@ main {
 .selector {
     display: inline-flex;
     gap: 0.25rem;
-    background: var(--color-tarjeta);
-    border: 1px solid var(--color-borde);
+    background: var(--color-velo);
+    border: 1px solid var(--color-tinta-suave);
     border-radius: 999px;
 }
 
@@ -500,21 +491,21 @@ main {
     border: 0;
     border-radius: 999px;
     background: transparent;
-    color: var(--color-texto-principal);
+    color: var(--color-sobre-oscuro);
     cursor: pointer;
 }
 
 .selector button:hover {
-    background: var(--color-tinta-suave);
+    background: var(--color-velo);
 }
 
 .selector button[aria-pressed="true"] {
-    background: var(--color-acento);
-    color: var(--color-boton-texto);
+    background: var(--color-sol);
+    color: var(--color-tinta-fija);
 }
 
 .selector button:focus-visible {
-    outline: 2px solid var(--color-acento);
+    outline: 2px solid var(--color-sol);
     outline-offset: 2px;
 }
 
@@ -544,7 +535,6 @@ main {
 
     }
 
-
     .menu-toggle {
         background: none;
         border: none;
@@ -566,6 +556,7 @@ main {
         position: absolute;
         top: 70px;
         right: 0px;
+        border-top: 1px solid var(--color-tinta-suave);
     }
 
     .menu.active {

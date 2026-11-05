@@ -25,6 +25,13 @@
     --color-borde: #d5dee3;
     --color-texto: #C9D3E6;
 
+    --color-fondo-oscuro: #14213d;
+    --color-sobre-oscuro: #ffffff;
+    /* texto sobre fondo oscuro */
+    --color-tinta-fija: #14213d;
+    /* texto sobre amarillo (sol) */
+    --color-velo: rgba(255, 255, 255, 0.12);
+
     /* ---------- Tipografía ---------- */
     --fuente-titulo: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
     --fuente-texto: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -78,34 +85,69 @@
 
 }
 
-/* Media Query */
+/* Colores modo dark / light */
+/* Colores modo dark / light */
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --color-fondo: var(--color-tinta-900, #14213d);
-        --color-texto-principal: var(--color-tinta-100, #c9d3e6);
-        --color-tarjeta: #1c2b4d;
-        --color-borde: #2c3d66;
-        --color-acento: #8fa9ff;
-        --color-boton-texto: #14213d;
+        color-scheme: dark;
+        --color-fondo: #0c1322;
+        --color-superficie: #14213d;
+        --color-tinta: #f0f4f8;
+        /* Texto principal claro para que se lea perfectamente */
+        --color-tinta-suave: #94a3b8;
+        --color-sol: #ffcb52;
+        --color-sol-hover: #fcbf49;
+        --color-ola: #38bdf8;
+        --color-ola-hover: #0ea5e9;
+        --color-coral: #ff6b8b;
+        --color-borde: #233354;
+        --color-texto: #cbd5e1;
+        --color-fondo-oscuro: #070b14;
+        --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.4);
+        --sombra-fuerte: 0 12px 32px rgba(0, 0, 0, 0.7);
     }
 }
 
 :root[data-theme="dark"] {
     color-scheme: dark;
-    --color-fondo: var(--color-tinta-900, #14213d);
-    --color-texto-principal: var(--color-tinta-100, #c9d3e6);
-    --color-tarjeta: #1c2b4d;
-    --color-borde: #2c3d66;
-    --color-acento: #8fa9ff;
-    --color-boton-texto: #14213d;
+    --color-fondo: #0c1322;
+    --color-superficie: #14213d;
+    --color-tinta: #f0f4f8;
+    /* Texto principal claro para que se lea perfectamente */
+    --color-tinta-suave: #94a3b8;
+    --color-sol: #ffcb52;
+    --color-sol-hover: #fcbf49;
+    --color-ola: #38bdf8;
+    --color-ola-hover: #0ea5e9;
+    --color-coral: #ff6b8b;
+    --color-borde: #233354;
+    --color-texto: #cbd5e1;
+    --color-fondo-oscuro: #070b14;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --sombra-fuerte: 0 12px 32px rgba(0, 0, 0, 0.7);
 }
 
 :root[data-theme="light"] {
     color-scheme: light;
 }
 
-/* Fin Media Query */
+:root[data-theme="dark"] .hero,
+:root[data-theme="dark"] .pie,
+:root[data-theme="dark"] .plan--destacado {
+    background-color: #fff !important;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root:not([data-theme="light"]) .hero,
+    :root:not([data-theme="light"]) .pie,
+    :root:not([data-theme="light"]) .plan--destacado {
+        background-color: #070b14 !important;
+    }
+}
+
+/* Fin Colores modo dark / light */
 
 /* Nota: las variables CSS NO funcionan dentro de @media (...).
    Puntos de ruptura de la práctica:
